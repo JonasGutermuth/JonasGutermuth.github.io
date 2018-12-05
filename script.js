@@ -27,6 +27,7 @@ $(function() {
 
 function showAufgabe() {
   var a = getRandomInt(0,5)
+  console.log(a)
   switch (a[0]) {
     case 0:
       eq = getMult()
