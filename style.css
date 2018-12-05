@@ -1,0 +1,19 @@
+/* Styles go here */
+
+/* Add your styles here */
+
+body{
+  font-family: Arial;
+}
+
+.notok {
+  color:red;
+}
+.ok {
+  color:green;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+}
