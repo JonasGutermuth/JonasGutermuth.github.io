@@ -114,8 +114,8 @@ function getMultX2() {
 function getAdd1() {
   var a = getRandomInt(-10,10);
   var b = getRandomInt(-10,10);
-  if(a[0]+b[0] === 0) {
   aufgabe = (a[0]+"x + "+b[0]+"x = "); 
+  if(a[0]+b[0] === 0) {
     return "0"
   } 
   return a[0]+b[0]+"x"
