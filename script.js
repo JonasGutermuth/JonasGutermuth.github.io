@@ -26,7 +26,7 @@ $(function() {
 })
 
 function showAufgabe() {
-  var a = getRandomInt(6,6)
+  var a = getRandomInt(0,6)
   console.log(a)
   switch (a[0]) {
     case 0:
