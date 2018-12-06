@@ -26,7 +26,7 @@ $(function() {
 })
 
 function showAufgabe() {
-  var a = getRandomInt(0,6)
+  var a = getRandomInt(0,8)
   console.log(a)
   switch (a[0]) {
     case 0:
@@ -47,8 +47,13 @@ function showAufgabe() {
     case 5:
       eq = getAdd2() 
       break;
-  
     case 6:
+      eq = getAus() 
+      break;
+    case 7:
+      eq = getAus() 
+      break;
+    case 8:
       eq = getAus() 
       break;
   }
