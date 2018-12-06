@@ -26,7 +26,7 @@ $(function() {
 })
 
 function showAufgabe() {
-  var a = getRandomInt(0,5)
+  var a = getRandomInt(6,6)
   console.log(a)
   switch (a[0]) {
     case 0:
@@ -46,6 +46,10 @@ function showAufgabe() {
       break;
     case 5:
       eq = getAdd2() 
+      break;
+  
+    case 6:
+      eq = getAus() 
       break;
   }
   $(".aufgabe").html(aufgabe)
@@ -119,6 +123,14 @@ function getAdd1() {
     return "0"
   } 
   return a[0]+b[0]+"x"
+}
+
+function getAus() {
+  var a = getRandomInt(-10,-1);
+  var b = getRandomInt(-10,10);
+  var c = getRandomInt(1,10);
+  aufgabe = (a[0]+" * ("+b[0]+"x - "+c[1]+") = "); 
+  return (a[0]*b[0])+"x+"+(a[0]*c[0]*-1)
 }
 
 function getAdd2() {
