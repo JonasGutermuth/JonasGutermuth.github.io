@@ -3,6 +3,7 @@
 // Add your code here
 var eq
 var ok = 0
+var akktAufgabe = 0
 var notok = 0
 var aufgabe = ""
 
@@ -10,6 +11,9 @@ $(function() {
 
   if(Cookies.get("notok") !== undefined) { 
     notok = parseInt(Cookies.get("notok"))
+  }
+  if(Cookies.get("akktAufgabe") !== undefined) { 
+    akktAufgabe = parseInt(Cookies.get("akktAufgabe"))
   }
   if(Cookies.get("ok") !== undefined) {
     ok = parseInt(Cookies.get("ok"))
@@ -26,9 +30,8 @@ $(function() {
 })
 
 function showAufgabe() {
-  var a = getRandomInt(0,8)
-  console.log(a)
-  switch (a[0]) {
+
+  switch (akktAufgabe) {
     case 0:
       eq = getMult()
       break;
@@ -45,15 +48,6 @@ function showAufgabe() {
       eq = getAdd2() 
       break;
     case 5:
-      eq = getAdd2() 
-      break;
-    case 6:
-      eq = getAus() 
-      break;
-    case 7:
-      eq = getAus() 
-      break;
-    case 8:
       eq = getAus() 
       break;
   }
@@ -81,10 +75,16 @@ function check() {
     if(eq == l) {
       ok++
       $(".old").append("<div class='ok'>"+aufgabe+""+eq+"</div>")
+
+    akktAufgabe = (akktAufgabe+1)%6
+
     } else {
       notok++
       $(".old").append("<div class='notok'>"+aufgabe+"<s>"+l+"</s> <b>"+eq+"</b> </div>")
     }
+
+  
+
     showErgebnis()
     showAufgabe()
     $("#loesung").val("")
